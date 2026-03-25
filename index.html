@@ -1,0 +1,170 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auction Pi Elite | Sovereign Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold-gradient: linear-gradient(135deg, #fceabb 0%, #fccd4d 50%, #f8b500 51%, #fbdf93 100%);
+            --gold-border: #D4AF37;
+            --deep-purple: #1A0D2F;
+        }
+
+        /* الطبقة التي تقتل اللون الأبيض نهائياً */
+        .royal-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1; /* خلف كل المحتوى */
+            background: url('image_11.png') no-repeat center center fixed;
+            background-size: cover;
+            background-color: #0F091A; /* لون احتياطي داكن جداً لمنع البياض */
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: #EFEFEF;
+            font-family: 'Amiri', serif;
+            min-height: 100vh;
+            background-color: transparent; /* لكي تظهر الطبقة الخلفية */
+        }
+
+        header {
+            text-align: center;
+            padding: 25px;
+            background: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--gold-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-img { width: 50px; margin-bottom: 5px; }
+        .logo-text { font-family: 'Cinzel', serif; color: var(--gold-border); font-size: 1.8rem; letter-spacing: 3px; }
+
+        .container { padding: 20px 20px 100px 20px; }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+        }
+
+        /* بطاقة المزايدة الفاخرة */
+        .card {
+            background: rgba(15, 9, 26, 0.95);
+            border: 1px solid var(--gold-border);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 45px rgba(212, 175, 55, 0.3); }
+
+        .product-img {
+            width: 100%; 
+            height: 200px;
+            border-radius: 15px;
+            border: 1px solid var(--gold-border);
+            margin-bottom: 15px;
+            background-size: cover;
+            background-position: center;
+            background-color: #222; /* لون احتياطي للصورة */
+        }
+
+        .price { font-size: 1.2rem; color: #fccd4d; margin: 15px 0; font-weight: bold; }
+
+        .btn-gold {
+            background: var(--gold-gradient);
+            color: #1a0a2e;
+            border: none;
+            padding: 14px;
+            border-radius: 30px;
+            font-weight: bold;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .btn-gold:hover { filter: brightness(1.1); box-shadow: 0 5px 15px rgba(248, 181, 0, 0.4); }
+
+        .nav-bar {
+            position: fixed; bottom: 0; width: 100%;
+            background: rgba(0,0,0,0.95);
+            border-top: 2px solid var(--gold-border);
+            display: flex; justify-content: space-around;
+            padding: 15px 0; z-index: 1000;
+        }
+        .nav-item { color: var(--gold-border); font-weight: bold; font-size: 0.85rem; text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<div class="royal-bg"></div>
+
+<header>
+    <img src="royal_seal.png" class="logo-img" alt="Seal">
+    <div class="logo-text">AUCTION PI ELITE</div>
+</header>
+
+<div class="container">
+    <div class="grid">
+        
+        <div class="card">
+            <div class="product-img" style="background-image: url('design_mockup.png');"></div>
+            <h3 style="color:var(--gold-border)">تصميم موكاب سيادي</h3>
+            <p>احصل على تصميم واجهة احترافي مخصص لمشروعك الإمبراطوري.</p>
+            <div class="price">المزايدة الحالية: 1,200 Pi</div>
+            <button class="btn-gold" onclick="alert('تم تسجيل مزايدتك!')">زايد الآن</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img" style="background-image: url('brand_identity.png');"></div>
+            <h3 style="color:var(--gold-border)">شعار الهوية الملكية</h3>
+            <p>تتويج علامتك التجارية بشعار ذهبي يعكس القوة والريادة.</p>
+            <div class="price">المزايدة الحالية: 850 Pi</div>
+            <button class="btn-gold" onclick="alert('تم تسجيل مزايدتك!')">زايد الآن</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img" style="background-image: url('prime_code.png');"></div>
+            <h3 style="color:var(--gold-border)">المحرك البرمجي السيادي</h3>
+            <p>كود عالي الأداء بتنسيق ليلي فاخر ومتوافق مع الأنظمة الحديثة.</p>
+            <div class="price">المزايدة الحالية: 2,400 Pi</div>
+            <button class="btn-gold" onclick="alert('تم تسجيل مزايدتك!')">زايد الآن</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img" style="background-image: url('luxury_watch.png');"></div>
+            <h3 style="color:var(--gold-border)">ساعة النخبة</h3>
+            <p>قطعة فنية نادرة تعكس قيمة الوقت وسر النجاح.</p>
+            <div class="price">المزايدة الحالية: 5,000 Pi</div>
+            <button class="btn-gold" onclick="alert('تم تسجيل مزايدتك!')">زايد الآن</button>
+        </div>
+
+        <div class="card">
+            <div class="product-img" style="background-image: url('black_hypercar.png');"></div>
+            <h3 style="color:var(--gold-border)">السيارة الفائقة السوداء</h3>
+            <p>تحفة هندسية لعشاق التميز والسيادة المطلقة.</p>
+            <div class="price">المزايدة الحالية: 4,500 Pi</div>
+            <button class="btn-gold" onclick="alert('تم تسجيل مزايدتك!')">زايد الآن</button>
+        </div>
+
+    </div>
+</div>
+
+<nav class="nav-bar">
+    <a href="#" class="nav-item">القبو الملكي</a>
+    <a href="#" class="nav-item">اللوجستيات</a>
+    <a href="#" class="nav-item">التبادل</a>
+    <a href="#" class="nav-item">البروتوكولات</a>
+</nav>
+
+</body>
+</html>
